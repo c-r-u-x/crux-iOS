@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A81F68CD2C13055300FAC237 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F68CB2C13055200FAC237 /* NavigationController.swift */; };
 		A81F68D02C13060E00FAC237 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A81F68CF2C13060E00FAC237 /* SnapKit */; };
-		A81F68D22C13060E00FAC237 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A81F68D12C13060E00FAC237 /* SnapKit-Dynamic */; };
 		A81F68D52C13061300FAC237 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A81F68D42C13061300FAC237 /* Then */; };
 		A875D1712C1180B900489207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A875D1702C1180B900489207 /* AppDelegate.swift */; };
 		A875D1732C1180B900489207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A875D1722C1180B900489207 /* SceneDelegate.swift */; };
@@ -38,7 +37,6 @@
 			files = (
 				A81F68D02C13060E00FAC237 /* SnapKit in Frameworks */,
 				A81F68D52C13061300FAC237 /* Then in Frameworks */,
-				A81F68D22C13060E00FAC237 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +132,6 @@
 			name = cliary;
 			packageProductDependencies = (
 				A81F68CF2C13060E00FAC237 /* SnapKit */,
-				A81F68D12C13060E00FAC237 /* SnapKit-Dynamic */,
 				A81F68D42C13061300FAC237 /* Then */,
 			);
 			productName = cliary;
@@ -443,11 +440,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A81F68CE2C13060E00FAC237 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		A81F68D12C13060E00FAC237 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A81F68CE2C13060E00FAC237 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 		A81F68D42C13061300FAC237 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
