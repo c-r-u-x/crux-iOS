@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A81F68CD2C13055300FAC237 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F68CB2C13055200FAC237 /* NavigationController.swift */; };
 		A875D1712C1180B900489207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A875D1702C1180B900489207 /* AppDelegate.swift */; };
 		A875D1732C1180B900489207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A875D1722C1180B900489207 /* SceneDelegate.swift */; };
 		A875D1752C1180B900489207 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A875D1742C1180B900489207 /* LoginViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A81F68CB2C13055200FAC237 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		A875D16D2C1180B900489207 /* cliary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cliary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A875D1702C1180B900489207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A875D1722C1180B900489207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A81F68CC2C13055200FAC237 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A81F68CB2C13055200FAC237 /* NavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		A875D1642C1180B900489207 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 		A875D18F2C1191E600489207 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A81F68CC2C13055200FAC237 /* Navigation */,
 				A875D1902C11926000489207 /* Auth */,
 				A875D1912C11927300489207 /* TabBar */,
 			);
@@ -186,6 +197,7 @@
 			files = (
 				A875D1932C11929F00489207 /* TabBarViewController.swift in Sources */,
 				A875D1752C1180B900489207 /* LoginViewController.swift in Sources */,
+				A81F68CD2C13055300FAC237 /* NavigationController.swift in Sources */,
 				A875D1712C1180B900489207 /* AppDelegate.swift in Sources */,
 				A875D1732C1180B900489207 /* SceneDelegate.swift in Sources */,
 			);
