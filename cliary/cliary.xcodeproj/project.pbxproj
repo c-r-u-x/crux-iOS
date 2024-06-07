@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A81F68CD2C13055300FAC237 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F68CB2C13055200FAC237 /* NavigationController.swift */; };
+		A81F68D02C13060E00FAC237 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A81F68CF2C13060E00FAC237 /* SnapKit */; };
+		A81F68D52C13061300FAC237 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A81F68D42C13061300FAC237 /* Then */; };
 		A875D1712C1180B900489207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A875D1702C1180B900489207 /* AppDelegate.swift */; };
 		A875D1732C1180B900489207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A875D1722C1180B900489207 /* SceneDelegate.swift */; };
 		A875D1752C1180B900489207 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A875D1742C1180B900489207 /* LoginViewController.swift */; };
 		A875D17A2C1180BB00489207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A875D1792C1180BB00489207 /* Assets.xcassets */; };
 		A875D17D2C1180BB00489207 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A875D17C2C1180BB00489207 /* Base */; };
-		A875D1892C11893F00489207 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A875D1882C11893F00489207 /* SnapKit */; };
-		A875D18B2C11893F00489207 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A875D18A2C11893F00489207 /* SnapKit-Dynamic */; };
-		A875D18E2C11896000489207 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A875D18D2C11896000489207 /* Then */; };
 		A875D1932C11929F00489207 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A875D1922C11929F00489207 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A81F68CB2C13055200FAC237 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		A875D16D2C1180B900489207 /* cliary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cliary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A875D1702C1180B900489207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A875D1722C1180B900489207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,15 +35,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A875D1892C11893F00489207 /* SnapKit in Frameworks */,
-				A875D18E2C11896000489207 /* Then in Frameworks */,
-				A875D18B2C11893F00489207 /* SnapKit-Dynamic in Frameworks */,
+				A81F68D02C13060E00FAC237 /* SnapKit in Frameworks */,
+				A81F68D52C13061300FAC237 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A81F68CC2C13055200FAC237 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A81F68CB2C13055200FAC237 /* NavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		A875D1642C1180B900489207 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +91,7 @@
 		A875D18F2C1191E600489207 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A81F68CC2C13055200FAC237 /* Navigation */,
 				A875D1902C11926000489207 /* Auth */,
 				A875D1912C11927300489207 /* TabBar */,
 			);
@@ -122,9 +131,8 @@
 			);
 			name = cliary;
 			packageProductDependencies = (
-				A875D1882C11893F00489207 /* SnapKit */,
-				A875D18A2C11893F00489207 /* SnapKit-Dynamic */,
-				A875D18D2C11896000489207 /* Then */,
+				A81F68CF2C13060E00FAC237 /* SnapKit */,
+				A81F68D42C13061300FAC237 /* Then */,
 			);
 			productName = cliary;
 			productReference = A875D16D2C1180B900489207 /* cliary.app */;
@@ -155,8 +163,8 @@
 			);
 			mainGroup = A875D1642C1180B900489207;
 			packageReferences = (
-				A875D1872C11893F00489207 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				A875D18C2C11895F00489207 /* XCRemoteSwiftPackageReference "Then" */,
+				A81F68CE2C13060E00FAC237 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				A81F68D32C13061300FAC237 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = A875D16E2C1180B900489207 /* Products */;
 			projectDirPath = "";
@@ -186,6 +194,7 @@
 			files = (
 				A875D1932C11929F00489207 /* TabBarViewController.swift in Sources */,
 				A875D1752C1180B900489207 /* LoginViewController.swift in Sources */,
+				A81F68CD2C13055300FAC237 /* NavigationController.swift in Sources */,
 				A875D1712C1180B900489207 /* AppDelegate.swift in Sources */,
 				A875D1732C1180B900489207 /* SceneDelegate.swift in Sources */,
 			);
@@ -408,7 +417,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A875D1872C11893F00489207 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		A81F68CE2C13060E00FAC237 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -416,7 +425,7 @@
 				minimumVersion = 5.7.1;
 			};
 		};
-		A875D18C2C11895F00489207 /* XCRemoteSwiftPackageReference "Then" */ = {
+		A81F68D32C13061300FAC237 /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then.git";
 			requirement = {
@@ -427,19 +436,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A875D1882C11893F00489207 /* SnapKit */ = {
+		A81F68CF2C13060E00FAC237 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A875D1872C11893F00489207 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = A81F68CE2C13060E00FAC237 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		A875D18A2C11893F00489207 /* SnapKit-Dynamic */ = {
+		A81F68D42C13061300FAC237 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A875D1872C11893F00489207 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
-		A875D18D2C11896000489207 /* Then */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A875D18C2C11895F00489207 /* XCRemoteSwiftPackageReference "Then" */;
+			package = A81F68D32C13061300FAC237 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
