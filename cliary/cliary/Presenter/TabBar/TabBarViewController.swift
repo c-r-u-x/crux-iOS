@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Then
 
 class TabBarViewController: UITabBarController {
     
@@ -19,27 +20,21 @@ class TabBarViewController: UITabBarController {
     private func configureTabBarViewController() {
         self.view.backgroundColor = .white
         self.tabBar.backgroundColor = .systemBackground
-        self.viewControllers = [
-            navigationController(of: Tab.daily),
-            navigationController(of: Tab.camera),
-            navigationController(of: Tab.profile),
-        ]
-    }
-    
-    private func navigationController(of tab: Tab) -> UINavigationController {
-        let navigationController = NavigationController(rootViewController: tab.viewController)
-        
-        navigationController.tabBarItem.title = tab.title
-        navigationController.tabBarItem.image = tab.icon
-        navigationController.tabBarItem.selectedImage = tab.selectedIcon
-        navigationController.navigationBar.isHidden = tab == .camera
-        
-        return navigationController
+
+        self.viewControllers = Tab.allCases.map {
+            let tab = $0
+            let (title, icon, selectedIcon) = tab.tabItemResource
+            
+            return NavigationController(rootViewController: tab.viewController).then {
+                $0.tabBarItem = UITabBarItem(title: title, image: UIImage(systemName: icon), selectedImage: UIImage(systemName: selectedIcon))
+                $0.navigationBar.isHidden = tab == .camera
+            }
+        }
     }
 }
 
 extension TabBarViewController {
-    enum Tab {
+    enum Tab: CaseIterable {
         case daily
         case camera
         case profile
@@ -56,38 +51,14 @@ extension TabBarViewController {
             }
         }
         
-        var title: String {
+        var tabItemResource: (title: String, icon: String, selectedIcon: String) {
             switch self {
             case .daily:
-                "기록"
+                return (title: "기록", icon: "calendar", selectedIcon: "calendar")
             case .camera:
-                "촬영"
+                return (title: "촬영", icon: "camera", selectedIcon: "camera.fill")
             case .profile:
-                "프로필"
-            }
-        }
-        
-        // TODO: - Replace with the designed icon
-        var icon: UIImage? {
-            switch self {
-            case .daily:
-                UIImage(systemName: "calendar")
-            case .camera:
-                UIImage(systemName: "camera")
-            case .profile:
-                UIImage(systemName: "person")
-            }
-        }
-        
-        // TODO: - Replace with the designed icon
-        var selectedIcon: UIImage? {
-            switch self {
-            case .daily:
-                UIImage(systemName: "calendar")
-            case .camera:
-                UIImage(systemName: "camera.fill")
-            case .profile:
-                UIImage(systemName: "person.fill")
+                return (title: "프로필", icon: "person", selectedIcon: "person.fill")
             }
         }
     }
