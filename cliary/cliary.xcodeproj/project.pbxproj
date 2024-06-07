@@ -9,19 +9,24 @@
 /* Begin PBXBuildFile section */
 		A875D1712C1180B900489207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A875D1702C1180B900489207 /* AppDelegate.swift */; };
 		A875D1732C1180B900489207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A875D1722C1180B900489207 /* SceneDelegate.swift */; };
-		A875D1752C1180B900489207 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A875D1742C1180B900489207 /* ViewController.swift */; };
+		A875D1752C1180B900489207 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A875D1742C1180B900489207 /* LoginViewController.swift */; };
 		A875D17A2C1180BB00489207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A875D1792C1180BB00489207 /* Assets.xcassets */; };
 		A875D17D2C1180BB00489207 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A875D17C2C1180BB00489207 /* Base */; };
+		A875D1892C11893F00489207 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A875D1882C11893F00489207 /* SnapKit */; };
+		A875D18B2C11893F00489207 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A875D18A2C11893F00489207 /* SnapKit-Dynamic */; };
+		A875D18E2C11896000489207 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A875D18D2C11896000489207 /* Then */; };
+		A875D1932C11929F00489207 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A875D1922C11929F00489207 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A875D16D2C1180B900489207 /* cliary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cliary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A875D1702C1180B900489207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A875D1722C1180B900489207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A875D1742C1180B900489207 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A875D1742C1180B900489207 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A875D1792C1180BB00489207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A875D17C2C1180BB00489207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A875D17E2C1180BB00489207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A875D1922C11929F00489207 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A875D1892C11893F00489207 /* SnapKit in Frameworks */,
+				A875D18E2C11896000489207 /* Then in Frameworks */,
+				A875D18B2C11893F00489207 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				A875D1842C11841300489207 /* App */,
+				A875D18F2C1191E600489207 /* Presenter */,
 				A875D1792C1180BB00489207 /* Assets.xcassets */,
 				A875D17B2C1180BB00489207 /* LaunchScreen.storyboard */,
 				A875D17E2C1180BB00489207 /* Info.plist */,
@@ -67,9 +76,33 @@
 			children = (
 				A875D1702C1180B900489207 /* AppDelegate.swift */,
 				A875D1722C1180B900489207 /* SceneDelegate.swift */,
-				A875D1742C1180B900489207 /* ViewController.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		A875D18F2C1191E600489207 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A875D1902C11926000489207 /* Auth */,
+				A875D1912C11927300489207 /* TabBar */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A875D1902C11926000489207 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A875D1742C1180B900489207 /* LoginViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		A875D1912C11927300489207 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A875D1922C11929F00489207 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +121,11 @@
 			dependencies = (
 			);
 			name = cliary;
+			packageProductDependencies = (
+				A875D1882C11893F00489207 /* SnapKit */,
+				A875D18A2C11893F00489207 /* SnapKit-Dynamic */,
+				A875D18D2C11896000489207 /* Then */,
+			);
 			productName = cliary;
 			productReference = A875D16D2C1180B900489207 /* cliary.app */;
 			productType = "com.apple.product-type.application";
@@ -116,6 +154,10 @@
 				Base,
 			);
 			mainGroup = A875D1642C1180B900489207;
+			packageReferences = (
+				A875D1872C11893F00489207 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				A875D18C2C11895F00489207 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = A875D16E2C1180B900489207 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -142,7 +184,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A875D1752C1180B900489207 /* ViewController.swift in Sources */,
+				A875D1932C11929F00489207 /* TabBarViewController.swift in Sources */,
+				A875D1752C1180B900489207 /* LoginViewController.swift in Sources */,
 				A875D1712C1180B900489207 /* AppDelegate.swift in Sources */,
 				A875D1732C1180B900489207 /* SceneDelegate.swift in Sources */,
 			);
@@ -363,6 +406,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A875D1872C11893F00489207 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		A875D18C2C11895F00489207 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A875D1882C11893F00489207 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A875D1872C11893F00489207 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		A875D18A2C11893F00489207 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A875D1872C11893F00489207 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		A875D18D2C11896000489207 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A875D18C2C11895F00489207 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A875D1652C1180B900489207 /* Project object */;
 }
