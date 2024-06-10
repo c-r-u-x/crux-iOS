@@ -23,10 +23,10 @@ class TabBarViewController: UITabBarController {
 
         self.viewControllers = Tab.allCases.map {
             let tab = $0
-            let (title, icon, selectedIcon) = tab.tabItemResource
+            let (title, icon, selectedIcon) = tab.itemResource
             
             return NavigationController(rootViewController: tab.viewController).then {
-                $0.tabBarItem = UITabBarItem(title: title, image: UIImage(systemName: icon), selectedImage: UIImage(systemName: selectedIcon))
+                $0.tabBarItem = UITabBarItem(title: title, image: icon, selectedImage: selectedIcon)
                 $0.navigationBar.isHidden = tab == .camera
             }
         }
@@ -51,14 +51,14 @@ extension TabBarViewController {
             }
         }
         
-        var tabItemResource: (title: String, icon: String, selectedIcon: String) {
+        var itemResource: (title: String, icon: UIImage?, selectedIcon: UIImage?) {
             switch self {
             case .daily:
-                return (title: "기록", icon: "calendar", selectedIcon: "calendar")
+                return (title: "기록", icon: UIImage(systemName: "calendar"), selectedIcon: UIImage(systemName: "calendar"))
             case .camera:
-                return (title: "촬영", icon: "camera", selectedIcon: "camera.fill")
+                return (title: "촬영", icon: UIImage(systemName:"camera"), selectedIcon: UIImage(systemName:"camera.fill"))
             case .profile:
-                return (title: "프로필", icon: "person", selectedIcon: "person.fill")
+                return (title: "프로필", icon: UIImage(systemName: "person"), selectedIcon: UIImage(systemName: "person.fill"))
             }
         }
     }
