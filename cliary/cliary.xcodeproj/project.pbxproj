@@ -16,6 +16,14 @@
 		A875D17A2C1180BB00489207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A875D1792C1180BB00489207 /* Assets.xcassets */; };
 		A875D17D2C1180BB00489207 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A875D17C2C1180BB00489207 /* Base */; };
 		A875D1932C11929F00489207 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A875D1922C11929F00489207 /* TabBarViewController.swift */; };
+		CC9DF1E52C31310400B8D2EE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DF1E42C31310400B8D2EE /* ProfileViewController.swift */; };
+		CC9DF1E82C31319700B8D2EE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DF1E72C31319700B8D2EE /* BaseViewController.swift */; };
+		CC9DF1EC2C31349D00B8D2EE /* Literal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DF1EB2C31349D00B8D2EE /* Literal.swift */; };
+		CC9DF1EE2C313B0200B8D2EE /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DF1ED2C313B0100B8D2EE /* BaseView.swift */; };
+		CC9DF1F02C313B9800B8D2EE /* BaseStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DF1EF2C313B9800B8D2EE /* BaseStackView.swift */; };
+		CC9DF1F32C313D4300B8D2EE /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DF1F22C313D4300B8D2EE /* ContainerView.swift */; };
+		CC9DF1F72C31415D00B8D2EE /* RootViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DF1F62C31415D00B8D2EE /* RootViewProtocol.swift */; };
+		CC9DF1F92C3141A400B8D2EE /* ProfileRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9DF1F82C3141A400B8D2EE /* ProfileRootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,14 @@
 		A875D17C2C1180BB00489207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A875D17E2C1180BB00489207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A875D1922C11929F00489207 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		CC9DF1E42C31310400B8D2EE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CC9DF1E72C31319700B8D2EE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CC9DF1EB2C31349D00B8D2EE /* Literal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Literal.swift; sourceTree = "<group>"; };
+		CC9DF1ED2C313B0100B8D2EE /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		CC9DF1EF2C313B9800B8D2EE /* BaseStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStackView.swift; sourceTree = "<group>"; };
+		CC9DF1F22C313D4300B8D2EE /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		CC9DF1F62C31415D00B8D2EE /* RootViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewProtocol.swift; sourceTree = "<group>"; };
+		CC9DF1F82C3141A400B8D2EE /* ProfileRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +86,7 @@
 		A875D16F2C1180B900489207 /* cliary */ = {
 			isa = PBXGroup;
 			children = (
+				CC9DF1E92C31348500B8D2EE /* Utility */,
 				A875D1842C11841300489207 /* App */,
 				A875D18F2C1191E600489207 /* Presenter */,
 				A875D1792C1180BB00489207 /* Assets.xcassets */,
@@ -91,6 +108,9 @@
 		A875D18F2C1191E600489207 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CC9DF1F12C313CBF00B8D2EE /* Reusable */,
+				CC9DF1E62C31318800B8D2EE /* Base */,
+				CC9DF1E32C3130E300B8D2EE /* Profile */,
 				A81F68CC2C13055200FAC237 /* Navigation */,
 				A875D1902C11926000489207 /* Auth */,
 				A875D1912C11927300489207 /* TabBar */,
@@ -112,6 +132,58 @@
 				A875D1922C11929F00489207 /* TabBarViewController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CC9DF1E32C3130E300B8D2EE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CC9DF1F42C31411000B8D2EE /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CC9DF1E62C31318800B8D2EE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CC9DF1E72C31319700B8D2EE /* BaseViewController.swift */,
+				CC9DF1ED2C313B0100B8D2EE /* BaseView.swift */,
+				CC9DF1EF2C313B9800B8D2EE /* BaseStackView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CC9DF1E92C31348500B8D2EE /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CC9DF1F52C31414D00B8D2EE /* Protocols */,
+				CC9DF1EB2C31349D00B8D2EE /* Literal.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		CC9DF1F12C313CBF00B8D2EE /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				CC9DF1F22C313D4300B8D2EE /* ContainerView.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		CC9DF1F42C31411000B8D2EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC9DF1E42C31310400B8D2EE /* ProfileViewController.swift */,
+				CC9DF1F82C3141A400B8D2EE /* ProfileRootView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC9DF1F52C31414D00B8D2EE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CC9DF1F62C31415D00B8D2EE /* RootViewProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,10 +264,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC9DF1E52C31310400B8D2EE /* ProfileViewController.swift in Sources */,
 				A875D1932C11929F00489207 /* TabBarViewController.swift in Sources */,
+				CC9DF1F02C313B9800B8D2EE /* BaseStackView.swift in Sources */,
 				A875D1752C1180B900489207 /* LoginViewController.swift in Sources */,
+				CC9DF1F92C3141A400B8D2EE /* ProfileRootView.swift in Sources */,
 				A81F68CD2C13055300FAC237 /* NavigationController.swift in Sources */,
 				A875D1712C1180B900489207 /* AppDelegate.swift in Sources */,
+				CC9DF1F72C31415D00B8D2EE /* RootViewProtocol.swift in Sources */,
+				CC9DF1EC2C31349D00B8D2EE /* Literal.swift in Sources */,
+				CC9DF1EE2C313B0200B8D2EE /* BaseView.swift in Sources */,
+				CC9DF1E82C31319700B8D2EE /* BaseViewController.swift in Sources */,
+				CC9DF1F32C313D4300B8D2EE /* ContainerView.swift in Sources */,
 				A875D1732C1180B900489207 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
