@@ -14,13 +14,11 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         configureTabBarViewController()
+        configureAppearence()
     }
     
     // TODO: - Design should be adopted.
     private func configureTabBarViewController() {
-        self.view.backgroundColor = .white
-        self.tabBar.backgroundColor = .systemBackground
-
         self.viewControllers = Tab.allCases.map {
             let tab = $0
             let (title, icon, selectedIcon) = tab.itemResource
@@ -30,6 +28,18 @@ class TabBarViewController: UITabBarController {
                 $0.navigationBar.isHidden = tab == .camera
             }
         }
+    }
+    
+    private func configureAppearence() {
+        let appearence = UITabBarAppearance()
+        
+        appearence.configureWithOpaqueBackground()
+        appearence.shadowColor = .lightGray
+        appearence.backgroundColor = .customBlack
+        self.tabBar.standardAppearance = appearence
+        self.tabBar.scrollEdgeAppearance = appearence
+        self.tabBar.tintColor = .customPrimary
+        self.tabBar.unselectedItemTintColor = .customGray
     }
 }
 
@@ -47,7 +57,7 @@ extension TabBarViewController {
             case .camera:
                 UIViewController().then { $0.view.backgroundColor = .green }
             case .profile:
-                UIViewController().then { $0.view.backgroundColor = .blue }
+                ProfileViewController(contentView: ProfileRootView())
             }
         }
         
